@@ -16,7 +16,6 @@
      
      // Declaration and initialization of an integer array
      int[] numbers = {1, 2, 3, 4, 5};
-     
 
 // ### 2. **Accessing Elements:**
 //    - Elements in an array are accessed using their index, starting from 0.
@@ -54,7 +53,6 @@
 // ### 5. **Multidimensional Arrays:**
 //    - Java supports multidimensional arrays, such as 2D arrays.
 
-     
      // Declaration and initialization of a 2D array
      int[][] matrix = {
          {1, 2, 3},
@@ -82,6 +80,22 @@
      int[] destinationArray = new int[sourceArray.length];
      System.arraycopy(sourceArray, 0, destinationArray, 0, sourceArray.length);
      
+// NOTES: 
+// When you attempt to print out an array you will see it's memory address 
+// To print out the array and it's values you must use the toString() method of the Arrays class 
+     int[] numbers = {5, 2, 8, 1, 3};
+     System.out.println(Arrays.toString(numbers)); // output: [5, 2, 8, 1, 3]
+
+// If you attempt to print out a two dimensional array you will not be able to see the inner arrays
+// You must use the deepToString() method of the Arrays class to print it out
+
+     int[][] multi_dimensional = {
+        {1, 2, 3}, 
+        {0, 0, 1}
+      }; 
+
+      System.out.println(Arrays.toString(multi_dimensional)); // Inner arrays cannot be printed; Output: [[I@2c7b84de, [I@3fee733d]
+      System.out.println(Arrays.deepToString(multi_dimensional)); // So we can now print the inner arrays; Output: [[1, 2, 3], [0, 0, 1]]
 
 // Arrays are fundamental data structures in Java and are widely used in various applications.
 // Understanding how to declare, initialize, and manipulate arrays is essential for effective Java programming.
